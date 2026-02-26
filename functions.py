@@ -60,3 +60,11 @@ def my_pet (pet_name1,animal_type1 ='Dog'):
 
 my_pet('MoMo')
 #if arugement is passed it will ignore the value passed in the parameter
+
+#another example 
+def make_tshirt(text_message,size):
+    print(f"\nSize Entered: {size}.")
+    print(f"Message on tshirt: {text_message}.")
+
+make_tshirt(40,"Git Commit")
+make_tshirt(text_message="Merge the request",size=41)
