@@ -10,6 +10,13 @@ def greet_user():
 
 greet_user()
 
+
+def display_message():
+    """Letting everyone know i am learning python functions"""
+    print ("I am learning to code in python")
+
+display_message()
+
 # passing information to a function 
 
 def greet_user(username):
@@ -41,3 +48,15 @@ def describe_pet(animal_type,pet_name):
     print(f"My {animal_type}'s name is {pet_name.title()}")
 
 describe_pet('Dog','MoMo')
+
+#This is Keyword arguement, helps not to mess up the arguements and the parameters.
+describe_pet(animal_type = 'Horse', pet_name='Thunder')
+
+# Default value's here we assign the default parameter for reccuring tasks if the parameter isin't gonna change we can use defaul values there 
+
+def my_pet (pet_name1,animal_type1 ='Dog'):
+    print(f"\nI have a {animal_type1}.")
+    print(f"My {animal_type1}'s name is {pet_name1.title()}")
+
+my_pet('MoMo')
+#if arugement is passed it will ignore the value passed in the parameter
