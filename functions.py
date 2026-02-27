@@ -68,3 +68,33 @@ def make_tshirt(text_message,size):
 
 make_tshirt(40,"Git Commit")
 make_tshirt(text_message="Merge the request",size=41)
+
+#Returning a simple value
+
+def get_formatted_name(first_name,last_name):
+    full_name = f"{first_name} {last_name}"
+    return (full_name.title())
+
+musician = get_formatted_name("arijit","singh")
+print(musician)
+
+#making an arguement optional
+def get_formatted_name(first_name,last_name,middle_name=''):
+    if middle_name:
+        full_name = f"{first_name} {middle_name} {last_name}"
+    else:
+        full_name = f"{first_name} {last_name}"
+    return (full_name.title())
+
+musician = get_formatted_name("arijit","singh")
+musician = get_formatted_name('john', 'hooker', 'lee')
+print(musician)
+
+#Returning a dictonary 
+def build_person(first_name,last_name):
+    person = {'first': first_name, 'last': last_name}
+    return person.title()
+
+musician = get_formatted_name('jimi', 'hendrix')
+print(musician)
+
