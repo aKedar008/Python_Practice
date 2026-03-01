@@ -150,9 +150,46 @@ print(album)
 # passing a list in a funtion:
 
 def greet_users(names):
+    messages = []
     for name in names:
         msg = f"Hello, {name.title()}!"
-        print(msg)
+        messages.append(msg)
+    return messages
 
 username = ['hannah','ty','jake']
-greet_users(username)
+result = greet_users(username)
+print(result)
+
+# modifying a list in a function
+#1st lets do this without using function
+
+unprinted_design = ['mobile cover', 'robot pendant', 'cars']
+completed_model = []
+
+while unprinted_design:
+    current_design = unprinted_design.pop()
+    print(f"{current_design} is getting printed")
+
+    completed_model.append(current_design)
+print(f"\nfollowing are the completed models:")
+for i in completed_model:
+    print(i)
+
+# 2nd lets create 2 function that will do our check our printing and other will show complted design
+unprinted_design = ['phone case', 'robot pendant', 'dodecahedron']
+completed_design = []
+
+def print_model(unprinted_design, completed_design):
+    while unprinted_design:
+        current_design = unprinted_design.pop()
+        print(f"printing model: {current_design}")
+        completed_design.append(current_design)
+    
+def show_completed_models(completed_design):
+    print(f"\nFollowing Designs are printed:")
+    for i in completed_design:
+        print(i)
+
+print_model(unprinted_design, completed_design)
+show_completed_models(completed_design)
+
