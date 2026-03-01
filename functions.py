@@ -128,3 +128,31 @@ while True:
 
  formatted_name = get_formatted_name(f_name, l_name)
  print(f"\nHello, {formatted_name}!")
+
+ 
+
+# 8.7 task make_album
+
+def make_album(artist,title,no_of_songs = None):
+    art = {'Name':artist, 'Title':title}
+    if no_of_songs:
+        art['no_of_songs'] = no_of_songs
+        
+    return art
+    
+album = make_album('A','album1')
+print(album)
+album = make_album('B','album2')
+print(album)
+album = make_album('A','album3',5)
+print(album)
+
+# passing a list in a funtion:
+
+def greet_users(names):
+    for name in names:
+        msg = f"Hello, {name.title()}!"
+        print(msg)
+
+username = ['hannah','ty','jake']
+greet_users(username)
