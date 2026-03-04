@@ -190,6 +190,30 @@ def show_completed_models(completed_design):
     for i in completed_design:
         print(i)
 
-print_model(unprinted_design, completed_design)
+print_model(unprinted_design[:], completed_design) # [:] creates a copy of the list and then sends it to the funtion
 show_completed_models(completed_design)
+
+#Passing an Arbitrary Number of Arguments, adding a *parameter it tells Python to make an empty tuple and pack whatever values it receives into this tuple.
+#Python can handle a function call with one value and a call with three values. It treats the different calls similarly. Note that Python packs the
+#arguments into a tuple, even if the function receives only one value
+
+def make_pizza(*toppings):
+    print("Making Pizza with the following Toppings:")
+    for topping in toppings:
+        print(f"- {topping}")
+
+make_pizza('mushrooms', 'green peppers', 'extra cheese')
+make_pizza('pepperoni')
+
+def build_profile(first,last, **user_info):
+    user_info['First_Name'] = first
+    user_info['Last Name'] = last
+    return user_info
+
+user_profile = build_profile('albert', 'einstein',
+ location='princeton',
+ field='physics')
+print(user_profile)
+
+
 
