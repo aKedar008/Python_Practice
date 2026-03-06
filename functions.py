@@ -215,5 +215,18 @@ user_profile = build_profile('albert', 'einstein',
  field='physics')
 print(user_profile)
 
+def make_sandwich(*toppings):
+    print(f"Prepring sandwich with following toppings: ")
+    for topping in toppings:
+        print(f"- {topping}")
 
+make_sandwich('mushrooms', 'green peppers', 'extra cheese')
+make_sandwich('pepperoni')
 
+def cars(brand, model,**car_info):
+    car_info['brand_name'] = brand
+    car_info['model_name'] = model
+    return car_info
+
+car_info = cars('subaru', 'outback', color='blue', tow_package=True)
+print(car_info)
